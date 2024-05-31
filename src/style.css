@@ -63,15 +63,21 @@ header a:visited {
   margin-top: 32px;
 }
 
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 footer {
   background-image: linear-gradient(
-      rgba(39, 32, 68, 0.8),
-      rgba(39, 32, 68, 0.8)
+      rgba(71, 42, 13, 0.7),
+      rgba(71, 42, 13, 0.7)
     ),
     url("/src/img/strand.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 0 100px;
 }
 
 footer h2 {
@@ -85,7 +91,6 @@ footer p,
 footer a,
 footer a:visited {
   color: white;
-  text-decoration: none;
   font-weight: 200;
   font-size: 16px;
   line-height: 24px;
