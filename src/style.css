@@ -9,6 +9,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+  background-color: #f8f8f8;
 }
 
 header {
@@ -49,24 +50,38 @@ header h2 {
 }
 
 header a,
-header a:visited {
-  display: inline-block;
-  color: var(--primary-color);
+header a:visited,
+.card-body a,
+.card-body:visited {
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 3px;
   text-align: center;
-  background-color: white;
   padding: 16px 32px;
   text-decoration: none;
   margin-top: 32px;
 }
 
+header a,
+header a:visited {
+  display: inline-block;
+  color: var(--primary-color);
+  background-color: white;
+}
+
+.card-body a,
+.card-body:visited {
+  display: block;
+  margin: 0;
+  color: white;
+  background-color: var(--primary-color);
+  opacity: 0.8;
+}
+
 section {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 50px;
+  padding: 100px 150px;
 }
 
 section h2 {
@@ -76,11 +91,7 @@ section h2 {
 }
 section h3 {
   opacity: 0.3;
-  margin: 0 0 20px;
-}
-
-section p {
-  text-align: justify;
+  margin: 0;
 }
 
 footer {
@@ -112,11 +123,32 @@ footer a:visited {
   opacity: 70%;
 }
 
+h4,
+h5 {
+  color: var(--primary-color);
+  margin: 20px 0 10px;
+}
+
+.about-breskens {
+  background-color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-start {
+  text-align: start;
+}
+
 .grid {
   display: grid;
-  gap: 32px;
+  gap: 64px;
   align-items: center;
-  justify-content: center;
 }
 
 .grid-section-1 {
@@ -125,6 +157,30 @@ footer a:visited {
 
 .grid-footer {
   grid-template-columns: 1fr 2fr 2fr;
+  align-items: start;
+}
+
+.grid-3-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  margin-top: 30px;
+  background-color: white;
+  align-self: start;
+}
+
+.card-body {
+  padding: 0 30px 30px;
+}
+
+.card-body p {
+  font-size: 14px;
+  margin: 0 0 15px;
+}
+
+.maps {
+  width: 100%;
 }
 
 .img-responsive {
@@ -170,5 +226,10 @@ footer a:visited {
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .maps {
+    display: none;
   }
 }
