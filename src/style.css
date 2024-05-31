@@ -66,7 +66,7 @@ header a:visited {
 section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 20px;
+  padding: 100px 50px;
 }
 
 section h2 {
@@ -83,18 +83,6 @@ section p {
   text-align: justify;
 }
 
-section img {
-  width: 80%;
-}
-
-.grid-section-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
 footer {
   background-image: linear-gradient(
       rgba(71, 42, 13, 0.7),
@@ -104,7 +92,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 0 100px;
+  padding: 100px 150px;
 }
 
 footer h2 {
@@ -124,11 +112,23 @@ footer a:visited {
   opacity: 70%;
 }
 
-footer .grid-footer {
-  padding: 80px 20px;
+.grid {
   display: grid;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-section-1 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-footer {
   grid-template-columns: 1fr 2fr 2fr;
-  gap: 30px;
+}
+
+.img-responsive {
+  max-width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -161,5 +161,14 @@ footer .grid-footer {
 
   section p {
     font-size: 14px;
+  }
+
+  section,
+  footer {
+    padding: 50px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
