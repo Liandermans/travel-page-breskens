@@ -1,22 +1,28 @@
+:root {
+  --primary-color: #42992f;
+}
+
+.container {
+  max-width: 1512px;
+  margin: 0 auto;
+}
+
 body {
   font-family: "DM Sans", sans-serif;
 }
 
 header {
   background-image: linear-gradient(
-      rgba(39, 32, 68, 0.3),
-      rgba(255, 255, 255, 0.3)
+      rgba(205, 168, 130, 0.5),
+      rgba(205, 168, 130, 0.5)
     ),
     url("/src/img/Vuurtoren Breskens.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-}
-
-.hero {
   text-align: center;
   color: white;
-  padding: 200px 0 200px;
+  padding: 200px 0;
 }
 
 header h1 {
@@ -39,12 +45,13 @@ header h2 {
   font-weight: 200;
   font-size: 40px;
   line-height: 60px;
-  margin: 0 0 42px 0;
+  margin: 0;
 }
 
 header a,
 header a:visited {
-  color: #272044;
+  display: inline-block;
+  color: var(--primary-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
@@ -53,7 +60,7 @@ header a:visited {
   background-color: white;
   padding: 16px 32px;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 32px;
 }
 
 footer {
@@ -85,9 +92,30 @@ footer a:visited {
   opacity: 70%;
 }
 
-footer .container {
+footer .container-footer {
   padding: 80px 20px;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   gap: 24px;
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 80px 0;
+  }
+
+  header h1 {
+    font-size: 42px;
+    line-height: 60px;
+  }
+
+  header h2 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  header h3 {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
