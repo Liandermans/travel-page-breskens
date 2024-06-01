@@ -201,6 +201,10 @@ h5 {
   max-width: 100%;
 }
 
+.css-filter {
+  filter: brightness(1.5);
+}
+
 @media (max-width: 900px) {
   header {
     padding: 80px 0;
