@@ -136,6 +136,11 @@ h5 {
 .gallery {
   max-width: 100%;
   border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.gallery:hover {
+  transform: scale(1.75);
 }
 
 .text-center {
@@ -247,6 +252,10 @@ h5 {
 
   .grid-gallery {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery:hover {
+    transform: scale(1);
   }
 }
 
